@@ -1,34 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f8ff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   margin: 0;
+  animation: fadeIn 1s ease-in;
 }
 
 .container {
   text-align: center;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  animation: bounceIn 0.5s ease-out forwards;
 }
 
 input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 200px;
+  padding: 12px;
+  width: 250px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #00bfff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -37,6 +46,18 @@ button:hover {
 
 #greetingMessage {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
